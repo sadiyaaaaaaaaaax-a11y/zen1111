@@ -290,7 +290,7 @@ def get_api_headers(api_key):
     return {"mapikey": api_key}
 
 # ==================== WELCOME MESSAGE CONFIGURATION ====================
-WELCOME_MESSAGE = """✨ 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 NHBD BOT🚀 ✨ 
+WELCOME_MESSAGE = """✨ 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 ꜰʙ ᴇxᴘᴇʀᴛ ᴢᴏɴᴇ 🌐  ✨ 
 ━━━━━━━━━━━━━━━━━━━━━━
 🚀 Enjoy Premium Quality Service 🚀"""
 
@@ -304,7 +304,7 @@ MAX_WITHDRAW = 10000
 
 # ==================== SUPPORT & DEVELOPER LINKS ====================
 SUPPORT_LINK = "https://t.me/riyad_ahmmed"      # আপনার সাপোর্ট লিংক দিন
-DEVELOPER_LINK = "https://t.me/riyad_ahmmed"          # আপনার ডেভেলপার লিংক দিন
+DEVELOPER_LINK = "https://t.me/noobxvau"          # আপনার ডেভেলপার লিংক দিন
 
 request_queue = asyncio.Queue()
 MAX_WORKERS = max(1, int(os.getenv("MAX_WORKERS", "20")))
@@ -1719,7 +1719,7 @@ async def fast_allocate_number(query, context, range_text, sid):
     # ★★★ USER BUTTONS COLOR UPDATED ★★★
     keyboard = InlineKeyboardMarkup([
         [InlineKeyboardButton("🔄 SAME RANGE", callback_data="same_range", style="primary")],
-        [InlineKeyboardButton("📢 OTP GROUP", url="https://t.me/+dhPxM_X5InFhMmE9", style="primary")]
+        [InlineKeyboardButton("📢 OTP GROUP", url="https://t.me/fb_expert_OTP_group", style="primary")]
     ])
     try:
         await query.message.edit_text(text, parse_mode="HTML", reply_markup=keyboard)
@@ -1803,7 +1803,7 @@ async def process_auto_number(update, context, range_text):
         # ★★★ SAME RANGE BUTTON COLOR IN AUTO NUMBER (FOR CONSISTENCY) ★★★
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton("🔄 SAME RANGE", callback_data="same_range", style="primary")],
-            [InlineKeyboardButton("📢 OTP GROUP", url="https://t.me/+dhPxM_X5InFhMmE9", style="primary")]
+            [InlineKeyboardButton("📢 OTP GROUP", url="https://t.me/fb_expert_OTP_group", style="primary")]
         ])
         await status_msg.edit_text(final_text, parse_mode="HTML", reply_markup=keyboard)
 
@@ -1893,7 +1893,7 @@ async def process_numbers(update_or_query, context, range_text, count):
         # ★★★ PROCESS NUMBERS BUTTONS COLOR UPDATE (FOR SINGLE NUMBER) ★★★
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton("🔄 SAME RANGE", callback_data="same_range", style="primary")],
-            [InlineKeyboardButton("📢 OTP GROUP", url="https://t.me/+dhPxM_X5InFhMmE9", style="primary")]
+            [InlineKeyboardButton("📢 OTP GROUP", url="https://t.me/fb_expert_OTP_group", style="primary")]
         ])
 
         await status_msg.edit_text(final_text, parse_mode="HTML", reply_markup=keyboard)
@@ -3785,7 +3785,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if r_text:
             try:
                 await query.message.edit_reply_markup(reply_markup=InlineKeyboardMarkup([[
-                    InlineKeyboardButton("📢 OTP GROUP", url="https://t.me/+dhPxM_X5InFhMmE9", style="primary")
+                    InlineKeyboardButton("📢 OTP GROUP", url="https://t.me/fb_expert_OTP_group", style="primary")
                 ]]))
             except:
                 pass
