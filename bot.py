@@ -25,11 +25,11 @@ from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, Con
 # ==================== LOCAL CONFIGURATION ====================
 # This is the complete single-file bot. Replace the two placeholders below.
 # Never share this file after putting real credentials in it.
-CONFIG_BOT_TOKEN = "8000917877:AAHJUZPRe-bwfI655JH88GHoIFG4zCwHbZ4"
+CONFIG_BOT_TOKEN = "8944598816:AAGVepGdxy0-uqw9tviMxHAq5TrTyoFleaw"
 CONFIG_ZENEX_API_KEY = "ZNX_GKNHYJSDP9YJXDMAP61AXY25"
 CONFIG_ZENEX_BASE_URL = "https://api.zenexnetwork.com"
-CONFIG_ADMIN_ID = 1849126202
-CONFIG_OTP_GROUP_ID = -1003997282815
+CONFIG_ADMIN_ID = 7167044847
+CONFIG_OTP_GROUP_ID = -1003912804861
 
 # Premium copy button (PTB 21+)
 try:
@@ -58,10 +58,10 @@ BOT_USERNAME = None  # set at runtime via post_init
 # ==================== ADMIN CONFIGURATION ====================
 # Set the primary admin ID only here.
 # Additional admins can still be added from the Bot Settings menu.
-ADMIN_ID = int(os.getenv("ADMIN_ID", str(CONFIG_ADMIN_ID or "1849126202")))
+ADMIN_ID = int(os.getenv("ADMIN_ID", str(CONFIG_ADMIN_ID or "7167044847")))
 ADMINS = [ADMIN_ID]
 
-OTP_GROUP_ID = int(os.getenv("OTP_GROUP_ID", str(CONFIG_OTP_GROUP_ID or "-1003997282815")))
+OTP_GROUP_ID = int(os.getenv("OTP_GROUP_ID", str(CONFIG_OTP_GROUP_ID or "-1003912804861")))
 
 # ==================== PREMIUM EMOJI MAPPING ====================
 
@@ -225,11 +225,11 @@ def load_settings():
         "active_panel": "zenex",
         "zenex_api_key": os.getenv("ZENEX_API_KEY", "").strip() or CONFIG_ZENEX_API_KEY.strip(),
         "zenex_base_url": os.getenv("ZENEX_BASE_URL", CONFIG_ZENEX_BASE_URL),
-        "panel_url": f"https://t.me/nhbdnumber2_bot?start={ADMIN_ID}",
+        "panel_url": f"https://t.me/FBExpertOTP_Bot_bot?start={ADMIN_ID}",
         "allowed_services": ["Instagram","Facebook","WhatsApp","TikTok","Telegram","Discord","PayPal","Imo"],
-        "otp_group_url": "https://t.me/+dhPxM_X5InFhMmE9",
-        "channel_url": "https://t.me/nhbdotpmethod",
-        "support_username": "@noobxvau",
+        "otp_group_url": "https://t.me/fb_expert_OTP_group",
+        "channel_url": "https://t.me/fb_expert_zone",
+        "support_username": "@riyad_ahmmed",
         "maintenance_mode": False,
         "cooldown_time": 1.0,
         "min_withdraw": 50.0,
@@ -303,8 +303,8 @@ MIN_WITHDRAW = 50
 MAX_WITHDRAW = 10000
 
 # ==================== SUPPORT & DEVELOPER LINKS ====================
-SUPPORT_LINK = "https://t.me/noobxvau"      # আপনার সাপোর্ট লিংক দিন
-DEVELOPER_LINK = "https://t.me/noobxvau"          # আপনার ডেভেলপার লিংক দিন
+SUPPORT_LINK = "https://t.me/riyad_ahmmed"      # আপনার সাপোর্ট লিংক দিন
+DEVELOPER_LINK = "https://t.me/riyad_ahmmed"          # আপনার ডেভেলপার লিংক দিন
 
 request_queue = asyncio.Queue()
 MAX_WORKERS = max(1, int(os.getenv("MAX_WORKERS", "20")))
@@ -1516,8 +1516,8 @@ async def monitor_loop(app):
                                 otp_code, callback_data=f"copy_text_{otp_code}",
                                 api_kwargs={"icon_custom_emoji_id": "5296369303661067030"})
 
-                        panel_url = settings.get("panel_url", f"https://t.me/nhbdnumber2_bot?start={ADMIN_ID}")
-                        channel_url = settings.get("channel_url", "https://t.me/nhbdotpmethod")
+                        panel_url = settings.get("panel_url", f"https://t.me/FBExpertOTP_Bot_bot?start={ADMIN_ID}")
+                        channel_url = settings.get("channel_url", "https://t.me/fb_expert_zone")
                         masked = mask_number(clean_num)
                         user_msg  = f"{flag_tg} {app_em} +{clean_num}"
                         group_msg = f"{flag_tg} {app_em} +{masked}"
