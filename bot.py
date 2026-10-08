@@ -233,7 +233,7 @@ def load_settings():
         "maintenance_mode": False,
         "cooldown_time": 1.0,
         "min_withdraw": 50.0,
-        "otp_bonus": 0.20,
+        "otp_bonus": 0.15,
         "referral_bonus": 0.0,
         "admins": [ADMIN_ID],
         "owners": [ADMIN_ID],
@@ -295,7 +295,7 @@ WELCOME_MESSAGE = """✨ 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 ꜰʙ ᴇxᴘᴇ�
 🚀 Enjoy Premium Quality Service 🚀"""
 
 # ==================== OTP RATE CONFIGURATION ====================
-OTP_RATE = 0.20
+OTP_RATE = 0.15
 
 # ==================== REFERRAL / WITHDRAW CONFIGURATION ====================
 REFERRAL_PRICE = 0
